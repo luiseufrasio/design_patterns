@@ -1,7 +1,9 @@
 # design_patterns
 Design Patterns implementation in some programming languages
 
-[https://refactoring.guru/design-patterns]
+# Nice links
+https://refactoring.guru/design-patterns
+https://www.youtube.com/watch?v=wAX8VA7FH8M (Design Patterns in Typescript)
 
 # Compilation example
 javac Java/creational/factory/method/*.java -d bin/
