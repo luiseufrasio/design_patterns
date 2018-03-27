@@ -1,3 +1,4 @@
+package behavioral.strategy.playful;
 public abstract class Duck {
     
     FlyBehavior flyBehavior;

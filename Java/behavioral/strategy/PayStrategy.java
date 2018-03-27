@@ -1,3 +1,4 @@
+package behavioral.strategy;
 /**
  * Common interface for all strategies
  */ 

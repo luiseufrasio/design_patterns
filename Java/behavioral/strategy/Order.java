@@ -1,3 +1,4 @@
+package behavioral.strategy;
 /**
  * Order class. Doesn't know the concrete payment method (strategy) user has
  * picked. It uses common strategy interface to delegate collecting payment data

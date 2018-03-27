@@ -1,3 +1,5 @@
+package behavioral.observer;
+
 import java.io.File;
 
 public class Editor {

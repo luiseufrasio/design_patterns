@@ -1,8 +1,10 @@
+package behavioral.observer;
+
 import java.util.logging.*;
 
-public class DemoMain {
+public class ObserverMain {
     
-    private static Logger logger = Logger.getLogger(DemoMain.class.getName());
+    private static Logger logger = Logger.getLogger(ObserverMain.class.getName());
 
     public static void main(String[] args) {
         Editor editor = new Editor();

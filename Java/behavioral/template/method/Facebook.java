@@ -1,6 +1,7 @@
-public class Twitter extends SocialNetwork {
+package behavioral.template.method;
+public class Facebook extends SocialNetwork {
 
-    public Twitter(String userName, String password) {
+    public Facebook(String userName, String password) {
         this.userName = userName;
         this.password = password;
     }
@@ -14,7 +15,7 @@ public class Twitter extends SocialNetwork {
         password.chars().mapToObj(c -> (char)'*').forEach(System.out::print);
 
         simulateNetworkLatency();
-        System.out.println("\n\nLogIn success on Twitter");
+        System.out.println("\n\nLogIn success on Facebook");
 
         return true;
     }
@@ -22,20 +23,19 @@ public class Twitter extends SocialNetwork {
     @Override
     public void logOut() {
         
-        System.out.println("User: '" + userName + "' was logged out from Twitter");
+        System.out.println("User: '" + userName + "' was logged out from Facebook");
     }
     
     @Override
     public boolean sendData(byte[] data) {
-        final boolean messagePosted = (data.length <= 144);
+        final boolean messagePosted = true;
         
         if (messagePosted) {
         
-            System.out.println("Message: '" + new String(data) + "' was posted on Twitter");
+            System.out.println("Message: '" + new String(data) + "' was posted on Facebook");
             return true;
         } else {
         
-            System.out.println("Sorry, message: '" + new String(data) + "' has more than 144 characteres!");
             return false;
         }
     }

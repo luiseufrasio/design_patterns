@@ -1,3 +1,4 @@
+package behavioral.strategy;
 import java.io.*;
 import java.util.*;
 import java.util.logging.*;
@@ -5,13 +6,13 @@ import java.util.logging.*;
 /**
  * World first console e-commerce application.
  */
-public class DemoMain {
+public class StrategyMain {
     public static Map<Integer, Integer> priceOnProducts = new HashMap<>();
     public static Console console = System.console();
     private static Order order = new Order();
     private static PayStrategy strategy;
     
-    private static Logger logger = Logger.getLogger(DemoMain.class.getName());
+    private static Logger logger = Logger.getLogger(StrategyMain.class.getName());
 
     static {
         priceOnProducts.put(1, 2200);

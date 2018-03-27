@@ -1,3 +1,4 @@
+package behavioral.strategy.playful;
 public class ModelDuck extends Duck {
     
     public ModelDuck() {
