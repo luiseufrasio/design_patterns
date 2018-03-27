@@ -14,7 +14,7 @@ public class Order {
     }
 
     public void setTotalCost(int cost) {
-        this.totalCost += cost;
+        Order.totalCost += cost;
     }
 
     public static int getTotalCost() {

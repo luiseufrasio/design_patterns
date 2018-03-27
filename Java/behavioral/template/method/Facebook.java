@@ -48,7 +48,8 @@ public class Facebook extends SocialNetwork {
             
             while (i < 10) {
                 System.out.print(".");
-                Thread.currentThread().sleep(500);
+                Thread.currentThread();
+				Thread.sleep(500);
                 i++;
             }
             

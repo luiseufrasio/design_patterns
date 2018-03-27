@@ -1,7 +1,6 @@
 package behavioral.strategy;
-import java.io.*;
-import java.util.*;
-import java.util.logging.*;
+import java.io.Console;
+import java.util.logging.Logger;
 
 public class PayByCreditCard  implements PayStrategy {
     private final Console console = System.console();
@@ -60,4 +59,17 @@ class CreditCard {
     public int getAmount() {
         return amount;
     }
+
+	public String getNumber() {
+		return number;
+	}
+
+	public String getDate() {
+		return date;
+	}
+
+	public String getCvv() {
+		return cvv;
+	}
+    
 }
