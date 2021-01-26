@@ -5,8 +5,8 @@ import java.lang.System.Logger.Level;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PrototypeMain {
-	private static Logger logger = System.getLogger(PrototypeMain.class.getName());
+public class Main {
+	private static Logger logger = System.getLogger(Main.class.getName());
 	
 	public static void main(String[] args) {
 		List<Shape> shapes = new ArrayList<>();

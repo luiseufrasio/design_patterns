@@ -1,6 +1,6 @@
 package structural.decorator;
 
-public class DecoratorMain {
+public class Main {
 
 	public static void main(String[] args) {
 		var input = String.format("Name\t\tSalary\n%s\t%d\n%s\t%d\n", 

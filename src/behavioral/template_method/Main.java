@@ -1,7 +1,7 @@
 package behavioral.template_method;
 import java.io.Console;
 
-public class TeplateMethodMain {
+public class Main {
     
     public static void main(String... args) {
         SocialNetwork network = null;        

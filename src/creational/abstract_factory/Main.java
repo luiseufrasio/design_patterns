@@ -1,6 +1,6 @@
 package creational.abstract_factory;
 
-public class AbstractFactoryMain {
+public class Main {
 	private static Application configureApplication() {
         Application app;
         GUIFactory factory;

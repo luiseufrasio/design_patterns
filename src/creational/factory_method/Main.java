@@ -1,6 +1,6 @@
 package creational.factory_method;
 
-public class FactoryMethodMain {
+public class Main {
 
 	private static Dialog dialog;
 
