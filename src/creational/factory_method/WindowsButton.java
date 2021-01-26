@@ -1,4 +1,4 @@
-package creational.factory.method;
+package creational.factory_method;
 
 import javax.swing.*;
 import java.awt.*;

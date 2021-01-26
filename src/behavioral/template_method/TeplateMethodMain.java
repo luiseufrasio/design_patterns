@@ -1,4 +1,4 @@
-package behavioral.template.method;
+package behavioral.template_method;
 import java.io.Console;
 
 public class TeplateMethodMain {

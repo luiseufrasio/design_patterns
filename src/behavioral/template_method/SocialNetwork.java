@@ -1,4 +1,4 @@
-package behavioral.template.method;
+package behavioral.template_method;
 public abstract class SocialNetwork {
 
     protected String userName;
