@@ -1,7 +1,11 @@
 package behavioral.strategy;
 import java.io.*;
+import java.lang.System.Logger;
+import java.lang.System.Logger.Level;
 import java.util.*;
-import java.util.logging.*;
+
+import creational.prototype.PrototypeMain;
+
 
 /**
  * World first console e-commerce application.
@@ -12,7 +16,7 @@ public class StrategyMain {
     private static Order order = new Order();
     private static PayStrategy strategy;
     
-    private static Logger logger = Logger.getLogger(StrategyMain.class.getName());
+    private static Logger logger = System.getLogger(PrototypeMain.class.getName());
 
     static {
         priceOnProducts.put(1, 2200);
@@ -61,14 +65,14 @@ public class StrategyMain {
                 order.processOrder(strategy);
             }
 
-            logger.info("Pay " + Order.getTotalCost() + " units or Continue shopping?  P/C: ");
+            logger.log(Level.INFO, "Pay " + Order.getTotalCost() + " units or Continue shopping?  P/C: ");
             String proceed = console.readLine();
             if (proceed.equalsIgnoreCase("P")) {
                 // Finally, strategy handles the payment.
                 if (strategy.pay(Order.getTotalCost())) {
-                    logger.info("Payment has succeeded");
+                    logger.log(Level.INFO, "Payment has succeeded");
                 } else {
-                    logger.info("FAIL! Check your data");
+                    logger.log(Level.INFO, "FAIL! Check your data");
                 }
                 order.setClosed();
             }

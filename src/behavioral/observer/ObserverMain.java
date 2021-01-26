@@ -1,10 +1,13 @@
 package behavioral.observer;
 
-import java.util.logging.*;
+import java.lang.System.Logger;
+import java.lang.System.Logger.Level;
+
+import creational.prototype.PrototypeMain;
 
 public class ObserverMain {
     
-    private static Logger logger = Logger.getLogger(ObserverMain.class.getName());
+	private static Logger logger = System.getLogger(PrototypeMain.class.getName());
 
     public static void main(String[] args) {
         Editor editor = new Editor();
@@ -22,7 +25,7 @@ public class ObserverMain {
             editor.openFile("test.txt");
             editor.saveFile();
         } catch (Exception e) {
-            logger.severe(e.getMessage());
+            logger.log(Level.ERROR, e.getMessage());
         }
     }
 }

@@ -1,7 +1,9 @@
 package behavioral.strategy;
 import java.io.*;
+import java.lang.System.Logger;
+import java.lang.System.Logger.Level;
 import java.util.*;
-import java.util.logging.*;
+
 
 public class PayByPayPal implements PayStrategy {
     private static final Map<String, String> DATA_BASE = new HashMap<>();
@@ -10,7 +12,7 @@ public class PayByPayPal implements PayStrategy {
     private String password;
     private boolean signedIn;
     
-    private Logger logger = Logger.getLogger(PayByPayPal.class.getName());
+    private static Logger logger = System.getLogger(PayByPayPal.class.getName());
     
     static {
         DATA_BASE.put("luis123", "luis.eufrasio@gmail.com");
@@ -26,9 +28,9 @@ public class PayByPayPal implements PayStrategy {
             email = console.readLine("Enter user email:\n|>");
             password = new String(console.readPassword("Enter password:\n|>"));
             if (verify()) {
-                logger.info("Data verification was successful");
+                logger.log(Level.INFO, "Data verification was successful");
             } else {
-                logger.info("Wrong email or password!");
+                logger.log(Level.INFO, "Wrong email or password!");
             }
         }
     }
@@ -39,7 +41,7 @@ public class PayByPayPal implements PayStrategy {
     @Override
     public boolean pay(int paymentAmount) {
         if (signedIn) {
-            logger.info("Paying " + paymentAmount + " using PayPal");
+            logger.log(Level.INFO, "Paying " + paymentAmount + " using PayPal");
             return true;
         } else {
             return false;

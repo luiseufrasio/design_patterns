@@ -1,12 +1,13 @@
 package behavioral.strategy;
 import java.io.Console;
-import java.util.logging.Logger;
+import java.lang.System.Logger;
+import java.lang.System.Logger.Level;
 
 public class PayByCreditCard  implements PayStrategy {
     private final Console console = System.console();
     private CreditCard card;
     
-    private static Logger logger = Logger.getLogger(PayByCreditCard.class.getName());
+    private static Logger logger = System.getLogger(PayByCreditCard.class.getName());
     
     /**
      * Collect customer's data.
@@ -26,7 +27,7 @@ public class PayByCreditCard  implements PayStrategy {
     @Override
     public boolean pay(int paymentAmount) {
         if (cardIsPresent()) {
-            logger.info("Paying " + paymentAmount + " using Credit Card");
+            logger.log(Level.INFO, "Paying " + paymentAmount + " using Credit Card");
             card.setAmount(card.getAmount() - paymentAmount);
             return true;
         } else {
